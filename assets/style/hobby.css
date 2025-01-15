@@ -1,0 +1,153 @@
+:root {
+    --font-family-base: "Comfortaa", serif;
+    --font-family-sec: "Volkhov", serif;
+
+    --font-size-medium: 20px;
+    --font-size-large: 36px;
+    --font-size-very-large: 48px;
+
+    --foreground-header: #D8125B;
+    --foreground-white: #dfd7d7;
+    --foreground: #D8125B;
+    --foreground-hover: #a43819;
+
+    --background-body: #1d1e20;
+    --background-section: #222229;
+
+    --border-radius: 15px;
+    --border: 12px 24px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    :root {
+        scroll-behavior: smooth;
+    }
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+body {
+    background-color: var(--background-body);
+    font-family: var(--font-family-base);
+}
+
+.header {
+    display: flex;
+    align-content: space-between;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.header a {
+    text-decoration: none;
+    font-size: var(--font-size-medium);
+    color: var(--foreground-header);
+    font-weight: 600;
+    margin-right: 25px;
+    transition: all 0.2s;
+}
+
+.header a:last-of-type {
+    margin-right: 0;
+}
+
+.header a:hover {
+    color: var(--foreground-hover);
+}
+
+section {
+    background-color: var(--background-section);
+    box-shadow: 0px 8px 8px rgba(61, 58, 58, 0.25);
+    margin-bottom: 15px;
+    padding-bottom: 20px;
+    border-radius: var(--border-radius);
+}
+
+section h2 {
+    color: var(--foreground);
+    font-size: 28px;
+    padding-top: 25px;
+    margin-bottom: 10px;
+}
+
+section p {
+    color: var(--foreground-white);
+    font-size: 18px;
+    padding-bottom: 15px;
+    text-indent: 20px;
+}
+
+.photo-gallery {
+    align-items: center;
+    display: flex;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.photo-gallery-content {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    row-gap: 25px;
+    column-gap: 15px;
+}
+
+.photo-gallery img {
+    height: 280px;
+    transition: all 0.2s;
+}
+
+.photo-gallery img:hover {
+    transform: scale(1.025);
+}
+
+.video-container {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    row-gap: 25px;
+    column-gap: 15px;
+}
+
+.video-container iframe {
+    height: 315px;
+    width: 560px;
+    transition: all 0.2s;
+}
+
+.video-container iframe:hover {
+    transform: scale(1.025);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    background-color: var(--background-section);
+    padding-bottom: 20px;
+}
+
+.footer {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.footer p {
+    padding: 20px;
+    color: white;
+    font-size: 20px;
+    margin-top: 10px;
+}
